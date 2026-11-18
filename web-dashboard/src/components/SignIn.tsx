@@ -32,23 +32,24 @@ export function SignIn() {
 
   return (
     <main className="center-screen">
-      <form className="panel narrow" onSubmit={submit}>
-        <div className="panel-header">
+      <form className="panel narrow auth-panel" onSubmit={submit}>
+        <header className="panel-header auth-header">
+          <span className="auth-eyebrow">Expeditor Web Dashboard</span>
           <h1 className="brand">KitchenSync 360</h1>
-          <p className="muted small">
-            Expeditor web dashboard. Sign in with the controller account to create and cancel orders.
+          <p className="muted small auth-subtitle">
+            Sign in with the controller account to create and cancel orders.
           </p>
-        </div>
+        </header>
 
         {DEV_TOOLS && (
-          <div className="field">
-            <span>Preset Account</span>
+          <div className="field auth-field">
+            <span className="field-label">Preset Account</span>
             <div className="preset-accounts">
               {DEMO_ACCOUNTS.map((acct) => (
                 <button
                   key={acct.email}
                   type="button"
-                  className={`table-pill${email === acct.email ? ' active' : ''}`}
+                  className={`preset-btn${email === acct.email ? ' active' : ''}`}
                   onClick={() => {
                     setEmail(acct.email);
                     setError(null);
@@ -61,31 +62,33 @@ export function SignIn() {
           </div>
         )}
 
-        <label className="field">
-          <span>Email</span>
+        <label className="field auth-field">
+          <span className="field-label">Email</span>
           <input
             type="email"
             autoComplete="username"
+            placeholder="controller@kitchensync360.demo"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </label>
 
-        <label className="field">
-          <span>Password</span>
+        <label className="field auth-field">
+          <span className="field-label">Password</span>
           <input
             type="password"
             autoComplete="current-password"
+            placeholder="••••••••"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </label>
 
-        {error && <p className="error-text small">Sign-In Failed: {error}</p>}
+        {error && <p className="auth-error small">Sign-In Failed: {error}</p>}
 
-        <button className="btn primary full" type="submit" disabled={busy}>
+        <button className="btn primary full auth-submit" type="submit" disabled={busy}>
           {busy ? 'Signing In…' : 'Sign In'}
         </button>
       </form>

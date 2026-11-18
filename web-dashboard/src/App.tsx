@@ -57,9 +57,12 @@ export function App() {
   if (configError) {
     return (
       <main className="center-screen">
-        <div className="panel narrow">
-          <h1 className="brand">KitchenSync 360</h1>
-          <p className="error-text">{configError}</p>
+        <div className="panel narrow auth-panel">
+          <div className="panel-header auth-header">
+            <span className="auth-eyebrow">Expeditor Web Dashboard</span>
+            <h1 className="brand">KitchenSync 360</h1>
+          </div>
+          <p className="auth-error small">{configError}</p>
         </div>
       </main>
     );
@@ -77,12 +80,15 @@ export function App() {
 
   return (
     <main className="center-screen">
-      <div className="panel narrow">
-        <h1 className="brand">KitchenSync 360</h1>
+      <div className="panel narrow auth-panel">
+        <div className="panel-header auth-header">
+          <span className="auth-eyebrow">Expeditor Web Dashboard</span>
+          <h1 className="brand">KitchenSync 360</h1>
+        </div>
         {profileState.kind === 'error' ? (
           <>
-            <p className="error-text">{profileState.message}</p>
-            <button className="btn" onClick={() => void supabase.auth.signOut()}>
+            <p className="auth-error small">{profileState.message}</p>
+            <button className="btn full auth-submit" onClick={() => void supabase.auth.signOut()}>
               Sign Out
             </button>
           </>
