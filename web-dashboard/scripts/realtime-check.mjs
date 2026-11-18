@@ -54,9 +54,9 @@ const getOrder = async (c, id) => {
 async function main() {
   console.log(`Project: ${URL_}`);
   console.log('\n1. Demo account sign-in');
-  const controller = await signIn('controller@kitchensync360.demo');
-  const kitchen = await signIn('kitchen@kitchensync360.demo');
-  const waiter = await signIn('waiter@kitchensync360.demo');
+  const controller = await signIn('controller@kitchensync360.com');
+  const kitchen = await signIn('kitchen@kitchensync360.com');
+  const waiter = await signIn('waiter@kitchensync360.com');
   ok('controller, kitchen and waiter signed in');
 
   console.log('\n2. Realtime subscription (as the dashboard)');
@@ -165,7 +165,7 @@ async function main() {
   const directWrite = await controller.from('orders').update({ status: 'ready' }).eq('id', created.id).select();
   check(!!directWrite.error || (directWrite.data ?? []).length === 0, 'direct status writes are blocked');
   try {
-    const other = await signIn('other@anotherbistro.demo');
+    const other = await signIn('other@anotherbistro.com');
     const { data } = await other.from('orders').select('id');
     check((data ?? []).length === 0, 'other restaurant sees none of the demo orders');
   } catch (e) {

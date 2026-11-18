@@ -24,9 +24,9 @@ See [acceptance status](docs/acceptance-status.md) for checks passed and outstan
 
 | Role | Email | Password | Mode |
 | :--- | :--- | :--- | :--- |
-| **Controller** | `controller@kitchensync360.demo` | *(demo password)* | Central Dashboard |
-| **Kitchen** | `kitchen@kitchensync360.demo` | *(demo password)* | Grill, Fryer, and Pastry Stations |
-| **Waiter** | `waiter@kitchensync360.demo` | *(demo password)* | Waiter Queue & Wear OS Watch Bridge |
+| **Controller** | `controller@kitchensync360.com` | *(demo password)* | Central Dashboard |
+| **Kitchen** | `kitchen@kitchensync360.com` | *(demo password)* | Grill, Fryer, and Pastry Stations |
+| **Waiter** | `waiter@kitchensync360.com` | *(demo password)* | Waiter Queue & Wear OS Watch Bridge |
 
 ## Building & Installing the APK
 

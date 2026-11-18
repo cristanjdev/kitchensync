@@ -25,7 +25,7 @@ async function as(role) {
   const c = createClient(env.VITE_SUPABASE_URL, env.VITE_SUPABASE_PUBLISHABLE_KEY, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
-  const { error } = await c.auth.signInWithPassword({ email: `${role}@kitchensync360.demo`, password: PASSWORD });
+  const { error } = await c.auth.signInWithPassword({ email: `${role}@kitchensync360.com`, password: PASSWORD });
   if (error) throw new Error(`${role} sign-in failed: ${error.message}`);
   return c;
 }

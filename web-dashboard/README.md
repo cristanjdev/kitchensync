@@ -44,7 +44,7 @@ This signs in as all demo roles, subscribes to realtime like the dashboard, and 
 2. Add environment variables (Production and Preview):
    - `VITE_SUPABASE_URL` = `https://<project-ref>.supabase.co`
    - `VITE_SUPABASE_PUBLISHABLE_KEY` = `sb_publishable_...`
-3. Deploy, open the URL on the monitor's browser, sign in as `controller@kitchensync360.demo`, and press **Full screen**.
+3. Deploy, open the URL on the monitor's browser, sign in as `controller@kitchensync360.com`, and press **Full screen**.
 
 Or use the CLI from this folder: `npx vercel` (preview) / `npx vercel --prod`.
 

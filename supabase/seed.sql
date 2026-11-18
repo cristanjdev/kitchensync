@@ -31,7 +31,7 @@ begin
         v_controller_id,
         'authenticated',
         'authenticated',
-        'controller@kitchensync360.demo',
+        'controller@kitchensync360.com',
         crypt(v_password, gen_salt('bf')),
         now(),
         '{"provider":"email","providers":["email"]}',
@@ -45,7 +45,7 @@ begin
         v_kitchen_id,
         'authenticated',
         'authenticated',
-        'kitchen@kitchensync360.demo',
+        'kitchen@kitchensync360.com',
         crypt(v_password, gen_salt('bf')),
         now(),
         '{"provider":"email","providers":["email"]}',
@@ -59,7 +59,7 @@ begin
         v_waiter_id,
         'authenticated',
         'authenticated',
-        'waiter@kitchensync360.demo',
+        'waiter@kitchensync360.com',
         crypt(v_password, gen_salt('bf')),
         now(),
         '{"provider":"email","providers":["email"]}',
@@ -73,7 +73,7 @@ begin
         v_other_id,
         'authenticated',
         'authenticated',
-        'other@anotherbistro.demo',
+        'other@anotherbistro.com',
         crypt(v_password, gen_salt('bf')),
         now(),
         '{"provider":"email","providers":["email"]}',
@@ -113,10 +113,10 @@ begin
     -- 2. Create corresponding profiles
     insert into public.profiles (id, email, restaurant_id, role, display_name)
     values
-        (v_controller_id, 'controller@kitchensync360.demo', 'rest_demo_001', 'controller', 'Central Controller'),
-        (v_kitchen_id,    'kitchen@kitchensync360.demo',    'rest_demo_001', 'kitchen',    'Kitchen Station Staff'),
-        (v_waiter_id,     'waiter@kitchensync360.demo',     'rest_demo_001', 'waiter',     'Assigned Waiter'),
-        (v_other_id,      'other@anotherbistro.demo',       'rest_other_999', 'controller', 'Other Restaurant')
+        (v_controller_id, 'controller@kitchensync360.com', 'rest_demo_001', 'controller', 'Central Controller'),
+        (v_kitchen_id,    'kitchen@kitchensync360.com',    'rest_demo_001', 'kitchen',    'Kitchen Station Staff'),
+        (v_waiter_id,     'waiter@kitchensync360.com',     'rest_demo_001', 'waiter',     'Assigned Waiter'),
+        (v_other_id,      'other@anotherbistro.com',       'rest_other_999', 'controller', 'Other Restaurant')
     on conflict (id) do update
     set email = excluded.email,
         restaurant_id = excluded.restaurant_id,

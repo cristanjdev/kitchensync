@@ -108,7 +108,7 @@ object PresetAccounts {
     val accounts = listOf(
         PresetDemoAccount(
             userId = "11111111-1111-1111-1111-111111111111",
-            email = "controller@kitchensync360.demo",
+            email = "controller@kitchensync360.com",
             password = DEFAULT_DEMO_PASSWORD,
             role = AppRole.CONTROLLER,
             displayName = "Central Controller",
@@ -116,7 +116,7 @@ object PresetAccounts {
         ),
         PresetDemoAccount(
             userId = "22222222-2222-2222-2222-222222222222",
-            email = "kitchen@kitchensync360.demo",
+            email = "kitchen@kitchensync360.com",
             password = DEFAULT_DEMO_PASSWORD,
             role = AppRole.KITCHEN,
             displayName = "Kitchen Station Staff",
@@ -124,7 +124,7 @@ object PresetAccounts {
         ),
         PresetDemoAccount(
             userId = "33333333-3333-3333-3333-333333333333",
-            email = "waiter@kitchensync360.demo",
+            email = "waiter@kitchensync360.com",
             password = DEFAULT_DEMO_PASSWORD,
             role = AppRole.WAITER,
             displayName = "Assigned Waiter",

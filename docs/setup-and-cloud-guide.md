@@ -16,11 +16,11 @@ All accounts belong to demonstration restaurant `rest_demo_001` and share one de
 
 | Role | Email | Password | Assigned Mode |
 | :--- | :--- | :--- | :--- |
-| **Controller** | `controller@kitchensync360.demo` | *(demo password)* | Central Controller Dashboard |
-| **Kitchen** | `kitchen@kitchensync360.demo` | *(demo password)* | Station Display (`Grill`, `Fryer`, `Pastry`) |
-| **Waiter** | `waiter@kitchensync360.demo` | *(demo password)* | Waiter Queue & Wear OS Watch Notification Bridge |
+| **Controller** | `controller@kitchensync360.com` | *(demo password)* | Central Controller Dashboard |
+| **Kitchen** | `kitchen@kitchensync360.com` | *(demo password)* | Station Display (`Grill`, `Fryer`, `Pastry`) |
+| **Waiter** | `waiter@kitchensync360.com` | *(demo password)* | Waiter Queue & Wear OS Watch Notification Bridge |
 
-> An additional isolated account (`other@anotherbistro.demo`, restaurant `rest_other_999`) is included in `supabase/seed.sql` to verify Row-Level Security (Acceptance Scenario #13).
+> An additional isolated account (`other@anotherbistro.com`, restaurant `rest_other_999`) is included in `supabase/seed.sql` to verify Row-Level Security (Acceptance Scenario #13).
 
 ---
 
@@ -51,7 +51,7 @@ All accounts belong to demonstration restaurant `rest_demo_001` and share one de
    - Enable **"Show notifications on watch while using phone"** (critical because the Waiter phone stays awake and open in the app during the pitch).
 3. On the Waiter phone:
    - Launch **KitchenSync 360** and grant the **Allow Notifications** runtime permission when prompted.
-   - Sign in as **Assigned Waiter** (`waiter@kitchensync360.demo`).
+   - Sign in as **Assigned Waiter** (`waiter@kitchensync360.com`).
    - Tap **Test Watch** (or open **Setup -> Send Phase 1 Test Watch Alert**).
    - Confirm the watch vibrates and displays `KitchenSync 360 • Order #000` with `Table 1 • Order ready`.
    - Tap **Acknowledge** on the watch and verify the phone banner updates to `Verified: Watch Acknowledge received by phone`.

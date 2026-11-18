@@ -7,13 +7,13 @@ const DEV_TOOLS = import.meta.env.DEV;
 const DEV_PASSWORD: string = DEV_TOOLS ? (import.meta.env.VITE_DEMO_PASSWORD ?? '') : '';
 
 const DEMO_ACCOUNTS = [
-  { label: 'Controller', email: 'controller@kitchensync360.demo' },
-  { label: 'Kitchen', email: 'kitchen@kitchensync360.demo' },
-  { label: 'Waiter', email: 'waiter@kitchensync360.demo' },
+  { label: 'Controller', email: 'controller@kitchensync360.com' },
+  { label: 'Kitchen', email: 'kitchen@kitchensync360.com' },
+  { label: 'Waiter', email: 'waiter@kitchensync360.com' },
 ];
 
 export function SignIn() {
-  const [email, setEmail] = useState(DEV_TOOLS ? 'controller@kitchensync360.demo' : '');
+  const [email, setEmail] = useState(DEV_TOOLS ? 'controller@kitchensync360.com' : '');
   const [password, setPassword] = useState(DEV_PASSWORD);
   const [showPassword, setShowPassword] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -121,7 +121,7 @@ export function SignIn() {
             <input
               type="email"
               autoComplete="username"
-              placeholder="controller@kitchensync360.demo"
+              placeholder="name@restaurant.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
