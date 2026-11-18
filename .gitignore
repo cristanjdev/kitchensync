@@ -1,0 +1,22 @@
+.gradle/
+.gradle-local/
+build/
+app/build/
+local.properties
+*.iml
+.idea/
+.DS_Store
+supabase/.db-url
+.kotlin/
+*.apk
+*.aab
+*.jks
+*.keystore
+.env
+.env.*
+!.env.example
+release-apk/
+
+# Client material: kept on this PC only
+references/
+docs/presentation-script.md
